@@ -30,7 +30,7 @@ API_KEY = 'bed7bd6457084decbfdb723645194f65'
 base_url = 'https://api.sketchengine.eu/bonito/run.cgi/'
 
 
-
+# ======> Start of First Question <========
 can = ('can','q[lemma="can"]')
 may = ('may','q[lemma="may"]')
 must = ('must','q[lemma="must"]')
@@ -65,9 +65,12 @@ for cword,word in words:
 
     freq_tab.append((cword, out['Blocks_0_Items_0_freq']))
 
-print(freq_tab)
+for word in freq_tab:
+   print(word)
 
+# ======> End of First Question <=========
 
+# ========> Start of Second Question <========
 data = {
 'corpname': 'preloaded/brexit_1', # the corpus to be loaded
 'format': 'json', # return results in JSON format
@@ -107,3 +110,5 @@ for elem in n_v:
 print('\n')
 for elem in v_o:
     print(elem)
+
+# ========> End of Second Question <========
